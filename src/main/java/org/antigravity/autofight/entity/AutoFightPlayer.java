@@ -51,6 +51,7 @@ public class AutoFightPlayer extends ServerPlayer {
     private final DifficultyProfile difficulty;
     private final boolean isHumanized;
     private final KitManager.Kit kit;
+    private final DummyConnection dummyConnection;
 
     private final TargetTracker targetTracker;
     private final HeuristicEngine heuristicEngine;
@@ -92,8 +93,8 @@ public class AutoFightPlayer extends ServerPlayer {
         this.kit = kit;
 
         // Initialize Network Pipeline
-        DummyConnection dummyConnection = new DummyConnection();
-        this.connection = new DummyPacketListener(server, dummyConnection, this, CommonListenerCookie.createInitial(profile, false));
+        this.dummyConnection = new DummyConnection();
+        this.connection = new DummyPacketListener(server, this.dummyConnection, this, CommonListenerCookie.createInitial(profile, false));
 
         // Initialize AI components
         this.targetTracker = new TargetTracker(
@@ -726,11 +727,16 @@ public class AutoFightPlayer extends ServerPlayer {
         }
 
         plugin.unregisterBot(getUUID());
-
+        
         // Cleanly remove player entity from world and server player list
         try {
             ((CraftServer) Bukkit.getServer()).getServer().getPlayerList().remove(this);
         } catch (Exception ignored) {}
+
+        try {
+            dummyConnection.close();
+        } catch (Exception ignored) {}
+
         this.discard();
     }
 

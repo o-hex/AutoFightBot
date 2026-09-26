@@ -23,7 +23,7 @@ public class DummyConnection extends Connection {
 
     @Override
     public boolean isConnected() {
-        return true;
+        return channel != null && channel.isOpen();
     }
 
     @Override
@@ -31,6 +31,12 @@ public class DummyConnection extends Connection {
         return true;
     }
 
+    public void close() {
+        if (channel != null && channel.isOpen()) {
+            channel.close();
+        }
+    }
+    
     @Override
     public void send(Packet<?> packet, PacketSendListener callbacks) {
         // Discard outgoing packets to the fake player to avoid network serialization overhead
