@@ -1,0 +1,175 @@
+# AutoFightBot Configuration
+settings:
+  aggro-radius: 64.0
+  target-creative: false
+  target-spectator: false
+  bypass-permission: "autofight.bypass"
+  default-difficulty: "HARD"
+  default-mode: "HUMANIZED" # HUMANIZED or ROBOTIC
+  default-kit: "diamond_pvp"
+
+difficulties:
+  EASY:
+    reaction-delay-ticks: 8
+    crit-chance: 0.35
+    w-tap-chance: 0.40
+    shield-block-chance: 0.50
+    aim-smoothing-deg-per-tick: 15.0
+    attack-charge-threshold: 0.85
+  MEDIUM:
+    reaction-delay-ticks: 5
+    crit-chance: 0.65
+    w-tap-chance: 0.70
+    shield-block-chance: 0.75
+    aim-smoothing-deg-per-tick: 25.0
+    attack-charge-threshold: 0.92
+  HARD:
+    reaction-delay-ticks: 3
+    crit-chance: 0.85
+    w-tap-chance: 0.90
+    shield-block-chance: 0.90
+    aim-smoothing-deg-per-tick: 40.0
+    attack-charge-threshold: 0.98
+  NIGHTMARE:
+    reaction-delay-ticks: 0
+    crit-chance: 1.00
+    w-tap-chance: 1.00
+    shield-block-chance: 1.00
+    aim-smoothing-deg-per-tick: 180.0
+    attack-charge-threshold: 1.00
+
+kits:
+  diamond_pvp:
+    helmet:
+      material: DIAMOND_HELMET
+      enchantments:
+        PROTECTION: 4
+        UNBREAKING: 3
+    chestplate:
+      material: DIAMOND_CHESTPLATE
+      enchantments:
+        PROTECTION: 4
+        UNBREAKING: 3
+    leggings:
+      material: DIAMOND_LEGGINGS
+      enchantments:
+        PROTECTION: 4
+        UNBREAKING: 3
+    boots:
+      material: DIAMOND_BOOTS
+      enchantments:
+        PROTECTION: 4
+        UNBREAKING: 3
+    mainhand:
+      material: DIAMOND_SWORD
+      enchantments:
+        SHARPNESS: 5
+        UNBREAKING: 3
+    offhand:
+      material: SHIELD
+      enchantments:
+        UNBREAKING: 3
+    hotbar:
+      1:
+        material: DIAMOND_AXE
+        enchantments:
+          EFFICIENCY: 5
+      2:
+        material: GOLDEN_APPLE
+        amount: 16
+      3:
+        material: SPLASH_POTION
+        potion-type: STRONG_HEALING
+        amount: 4
+      4:
+        material: SPLASH_POTION
+        potion-type: STRONG_SWIFTNESS
+        amount: 2
+      5:
+        material: SPLASH_POTION
+        potion-type: STRONG_STRENGTH
+        amount: 2
+      6:
+        material: ENDER_PEARL
+        amount: 16
+
+  netherite_pvp:
+    helmet:
+      material: NETHERITE_HELMET
+      enchantments:
+        PROTECTION: 4
+    chestplate:
+      material: NETHERITE_CHESTPLATE
+      enchantments:
+        PROTECTION: 4
+    leggings:
+      material: NETHERITE_LEGGINGS
+      enchantments:
+        PROTECTION: 4
+    boots:
+      material: NETHERITE_BOOTS
+      enchantments:
+        PROTECTION: 4
+    mainhand:
+      material: NETHERITE_SWORD
+      enchantments:
+        SHARPNESS: 5
+    offhand:
+      material: TOTEM_OF_UNDYING
+      amount: 1
+    hotbar:
+      1:
+        material: NETHERITE_AXE
+      2:
+        material: ENCHANTED_GOLDEN_APPLE
+        amount: 4
+      3:
+        material: SHIELD
+      4:
+        material: SPLASH_POTION
+        potion-type: STRONG_HEALING
+        amount: 8
+      5:
+        material: SPLASH_POTION
+        potion-type: STRONG_SWIFTNESS
+        amount: 2
+      6:
+        material: SPLASH_POTION
+        potion-type: STRONG_STRENGTH
+        amount: 2
+      7:
+        material: ENDER_PEARL
+        amount: 16
+
+  iron_berserk:
+    helmet:
+      material: IRON_HELMET
+    chestplate:
+      material: IRON_CHESTPLATE
+    leggings:
+      material: IRON_LEGGINGS
+    boots:
+      material: IRON_BOOTS
+    mainhand:
+      material: IRON_AXE
+    offhand:
+      material: SHIELD
+    hotbar:
+      1:
+        material: GOLDEN_APPLE
+        amount: 8
+      2:
+        material: SPLASH_POTION
+        potion-type: HEALING
+        amount: 4
+      3:
+        material: SPLASH_POTION
+        potion-type: STRONG_SWIFTNESS
+        amount: 2
+      4:
+        material: SPLASH_POTION
+        potion-type: STRONG_STRENGTH
+        amount: 2
+      5:
+        material: ENDER_PEARL
+        amount: 16
