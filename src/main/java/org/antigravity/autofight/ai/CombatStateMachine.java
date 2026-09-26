@@ -219,7 +219,7 @@ public class CombatStateMachine {
                 return i;
             }
         }
-        return 0;
+        return -1;
     }
 
     private int findAxeSlot(PlayerInventory inv) {
