@@ -23,7 +23,7 @@ public class DummyConnection extends Connection {
 
     @Override
     public boolean isConnected() {
-        return true;
+        return channel != null && channel.isOpen();
     }
 
     @Override
