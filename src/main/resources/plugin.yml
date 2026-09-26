@@ -1,0 +1,13 @@
+name: AutoFightBot
+version: '1.0.0-SNAPSHOT'
+main: org.antigravity.autofight.AutoFightPlugin
+api-version: '1.21'
+description: A hostile, violent autofight NPC bot with simulated player input and modern 1.21 PvP combat.
+author: Antigravity
+permissions:
+  autofight.admin:
+    description: Permission to use /autofight commands
+    default: op
+  autofight.bypass:
+    description: Players with this permission will not be targeted by AutoFight bots
+    default: op

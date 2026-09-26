@@ -1,0 +1,21 @@
+# Gradle build & cache
+.gradle/
+build/
+bin/
+out/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# Local logs & transcripts
+logs/
+*.log
+*.jsonl
+*.md
